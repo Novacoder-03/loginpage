@@ -1,0 +1,118 @@
+<!Doctype html>
+<html>
+
+<head>
+<title>login page</title>
+<style>
+body
+{
+background-color:black;
+}
+#header
+{
+background-color:#39E0FA;
+width:100%;
+height:60px;
+}
+#header p
+{
+padding-left:300px;
+color:white;
+font-size:40px
+}
+#main
+{
+background-color:black;
+width:40%;
+height:200px;
+padding-left:50px;
+margin-left:300px;
+margin-top:150px;
+  border: 5px outset #39E0FA;
+}
+#func
+{
+margin-left:70px;
+margin-top:20px;
+background-color:#39E0FA;
+color:white;
+}
+#pic
+{
+margin-left:300px;
+color:#39E0FA;
+font-size:50px;
+}
+#happy
+{
+ display:none;
+float:right;
+margin-right:900px;
+margin-top:60px;
+height:60px;
+ 
+}
+#sad
+{
+ display:none;
+float:right;
+margin-right:900px;
+margin-top:60px;
+height:60px;
+
+
+}
+</style>
+<script type="text/jscript">
+function con()
+{
+var s=document.getElementById("user").value;
+var p=document.getElementById("pass").value;
+  var x = document.createElement("happy");
+  x.setAttribute("src", "img_pulpit.jpg");
+  x.setAttribute("width", "304");
+  x.setAttribute("height", "228");
+  x.setAttribute("alt", "The Pulpit Rock");
+
+
+if( p=="123")
+{
+var m="Hello mr.";
+  document.getElementById("pic").innerHTML=m.concat(s);
+  document.getElementById('happy').style.display="block";
+}
+else
+{
+  document.getElementById("pic").innerHTML="INVALID PASSWORD";
+   document.getElementById('sad').style.display="block";
+}
+
+ 
+}
+</script>
+</head>
+
+
+
+
+<body>
+<div id="header">
+<p>LOGIN PAGE</p>
+</div>
+<div id="main">
+<br><br>
+<lable for="user" style="color:#39E0FA;">USERNAME</lable>
+<input id="user"type:"text" placeholder="harish"/><br><br>
+<lable for="pass" style="color:#39E0FA;">PASSWORD</lable>
+<input id="pass" type:"text" placeholder="123"/><br>
+<input type="button" id="func" value="submit" onclick="con()"/>
+
+</div>
+<img id="happy" src="emghappy.png"/>
+<img id="sad" src="sademg.png"/>
+<p id="pic"></p>
+
+
+</body>
+
+</html>
